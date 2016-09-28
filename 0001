@@ -1,0 +1,9 @@
+from random import randint
+
+l = [chr(x) for x in xrange(65, 91)]
+l += [str(x) for x in xrange(0, 10)]
+for i in xrange(200):
+	m = ''
+	for j in xrange(25):
+		m += l[randint(0, len(l)-1)]
+	print '-'.join([m[5*x:5*x+5] for x in xrange(0,5)])
